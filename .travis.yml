@@ -20,7 +20,9 @@ compiler:
 os:
   - linux
   - osx
-
+arch:
+  - ppc64le
+  - amd64
 env:
   - OPTS="--enable-parser-generation $OPTS"
   - OPTS="--without-curl $OPTS"
