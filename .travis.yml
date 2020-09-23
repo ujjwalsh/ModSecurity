@@ -35,6 +35,7 @@ env:
 
 before_script:
   - echo $TRAVIS_OS_NAME
+  - '[ "$TRAVIS_CPU_ARCH" == "ppc64le" ] || sudo apt-get install -y ssdeep-devel'
   - '[ "$TRAVIS_OS_NAME" != osx ] || brew update'
   - '[ "$TRAVIS_OS_NAME" != osx ] || brew install cppcheck'
   - '[ "$TRAVIS_OS_NAME" != osx ] || brew install libmaxminddb'
