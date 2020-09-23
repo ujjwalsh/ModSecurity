@@ -10,7 +10,7 @@ addons:
     - liblua5.2-dev
     - liblmdb-dev
     - cppcheck
-
+    - ssdeep
 language: cpp
 
 compiler:
@@ -21,8 +21,8 @@ os:
   - linux
   - osx
 arch:
-  - ppc64le
   - amd64
+  - ppc64le
 env:
   - OPTS="--enable-parser-generation $OPTS"
   - OPTS="--without-curl $OPTS"
